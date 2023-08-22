@@ -5,7 +5,7 @@ import type { ResponseUrl } from '..';
 const worker = new Worker(
   /* webpackChunkName: "fetch-worker" */ new URL(
     './worker.js',
-    import.meta.url,
+    new URL(import.meta.url),
   ),
 );
 let counter: number = 0;
