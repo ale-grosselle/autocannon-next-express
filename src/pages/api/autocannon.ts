@@ -13,6 +13,6 @@ export default async function handler(
     res.status(200).json(output);
   } catch (e) {
     console.log(e, 'error');
-    res.status(500).json({});
+    res.status(500).json({ error: e });
   }
 }
