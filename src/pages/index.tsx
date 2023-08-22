@@ -29,9 +29,10 @@ export const getServerSideProps = async ({
     return {
       props: { response: JSON.stringify(response) },
     };
+  } else {
+    res.statusCode = 500;
   }
 
-  res.statusCode = 500;
   return {
     props: { response: 'ERROR, EMPTY URL!' },
   };
