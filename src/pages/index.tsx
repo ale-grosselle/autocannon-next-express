@@ -18,7 +18,7 @@ export const getServerSideProps = async ({
   let { url } = query;
   if (url) {
     if (Array.isArray(url)) {
-      url = url[0];
+      url = decodeURIComponent(url[0]);
     }
     const response = await getResponse(
       url,
