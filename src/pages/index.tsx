@@ -16,6 +16,7 @@ export const getServerSideProps = async ({
   query,
 }: GetServerSidePropsContext): Promise<{ props: ServerSideResponse }> => {
   let { url } = query;
+  console.log('THE URL is', url);
   if (url) {
     if (Array.isArray(url)) {
       url = url[0];
