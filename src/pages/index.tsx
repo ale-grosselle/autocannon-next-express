@@ -31,11 +31,10 @@ export const getServerSideProps = async ({
     };
   } else {
     res.statusCode = 500;
+    return {
+      props: { response: 'ERROR, EMPTY URL!' },
+    };
   }
-
-  return {
-    props: { response: 'ERROR, EMPTY URL!' },
-  };
 };
 
 export default function Home(props: { response: string }) {
