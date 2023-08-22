@@ -7,6 +7,8 @@ export default async function handler(
 ) {
   try {
     const options = req.query;
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     const output = await autocannon(options as autocannon.Options);
     res.status(200).json(output);
   } catch (e) {
