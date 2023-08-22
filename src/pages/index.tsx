@@ -26,9 +26,6 @@ export const getServerSideProps = async ({
       query,
     );
     res.statusCode = response?.status ?? 404;
-    if (response?.status !== 200) {
-      console.log('ERROR ERROR ERROR');
-    }
     return {
       props: { response: JSON.stringify(response) },
     };
