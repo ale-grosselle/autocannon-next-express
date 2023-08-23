@@ -4,10 +4,11 @@ import type { ResponseUrl } from '..';
 
 const worker = new Worker(
   /* webpackChunkName: "fetch-worker" */ new URL(
-    './worker.js',
+    'worker.js',
     new URL(import.meta.url),
   ),
 );
+
 let counter: number = 0;
 const map = new Map<
   string,
