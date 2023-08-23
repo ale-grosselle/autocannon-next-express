@@ -1,5 +1,5 @@
 import type { ParsedUrlQuery } from 'querystring';
-import { getConfigFromWorker } from './worker/main';
+import { getConfigFromWorker } from './worker';
 import { getUsingHTTP } from './https';
 import { getUsingFetch } from './fetch';
 
