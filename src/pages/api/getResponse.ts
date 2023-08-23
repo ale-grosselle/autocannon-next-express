@@ -20,6 +20,7 @@ export default async function handler(
       req.query.timeout ? Number(req.query.timeout) : 150,
       req.query,
     );
+    console.log('RESPONSE:', response?.status, response?.details, response?.ok);
     const statusCode = response?.status ?? 404;
     res.status(statusCode).json({ response });
     return;
