@@ -22,6 +22,7 @@ export default async function handler(
     );
     const statusCode = response?.status ?? 404;
     res.status(statusCode).json({ response });
+    return;
   }
   res.status(500).json({ response: null });
 }
